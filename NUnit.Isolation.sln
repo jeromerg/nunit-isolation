@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Isolation", "NUnit.Is
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Isolation.Tests", "NUnit.Isolation.Tests\NUnit.Isolation.Tests.csproj", "{0253CFB4-02A8-46A6-A61F-F7F34129F08A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DummyAssembly", "DummyAssembly\DummyAssembly.csproj", "{3E43F9A4-6B42-4A03-8F1C-061D6D523182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{0253CFB4-02A8-46A6-A61F-F7F34129F08A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0253CFB4-02A8-46A6-A61F-F7F34129F08A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0253CFB4-02A8-46A6-A61F-F7F34129F08A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E43F9A4-6B42-4A03-8F1C-061D6D523182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E43F9A4-6B42-4A03-8F1C-061D6D523182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E43F9A4-6B42-4A03-8F1C-061D6D523182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E43F9A4-6B42-4A03-8F1C-061D6D523182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

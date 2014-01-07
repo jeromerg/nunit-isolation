@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using DummyAssembly;
 using NUnit.Framework;
 using NUnit.Isolation.Api;
 
@@ -39,6 +40,17 @@ namespace NUnit.Isolation.Tests
         {
             Api.Isolation.ReRun(Isolations.Process);
             Assert.AreEqual("testValue", ConfigurationManager.AppSettings["testKey"], "app.config expected to be read in separate process and separate appdomain");
+        }
+
+        [Test]
+        public void ProcessTest_AppSettings_assemblyBinding()
+        {
+            Api.Isolation.ReRun(Isolations.Process);
+
+            // remark: DummyAssembly is not copied into target folder, but to targetfolder\libfolder
+            // which has been added to app.config runtime assemblyBinding section
+            // this test checks, that the app.config runtime assemblyBinding section is correctly taken into account
+            int dummyMethod = DummyClass.DummyMethod();
         }
     }
 }
