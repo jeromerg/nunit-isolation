@@ -50,3 +50,12 @@ While developing or fixing unit test, you may need to attach visual studio debug
 	{
 		// todo test here
 	}
+
+Installation
+------------
+- get source
+- replace the third-party nunit framework library
+- compile with the required platform AnyCPU or x86
+- add compilation result to your test project
+- add annotation or re-run command to your test
+- enjoy
