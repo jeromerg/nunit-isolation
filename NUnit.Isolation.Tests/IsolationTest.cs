@@ -28,11 +28,10 @@ namespace NUnit.Isolation.Tests
             Assert.AreEqual(AppDomainRunner.ISOLATED_APP_DOMAIN_NAME, AppDomain.CurrentDomain.FriendlyName);
         }
 
-        [Test, ExpectedException]
+        [Test]
         public void ProcessTest_TestExpectedToThrowAnException()
         {
             Api.Isolation.ReRun(Isolations.Process);
-            throw new ApplicationException("voilà");
         }
 
         [Test]

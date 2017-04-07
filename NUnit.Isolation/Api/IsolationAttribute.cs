@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 
 namespace NUnit.Isolation.Api
 {
@@ -21,13 +22,13 @@ namespace NUnit.Isolation.Api
             mAttachDebugger = attachDebugger;
         }
 
-        public void BeforeTest(TestDetails testDetails)
+        public void BeforeTest(ITest test)
         {
-            var testMethodInformation = new TestMethodInformation(testDetails.Method, mAttachDebugger);
+            var testMethodInformation = new TestMethodInformation(test.Method.MethodInfo, mAttachDebugger);
             IsolationDispatcher.IsolateTestRun(mIsolation, testMethodInformation);
         }
 
-        public void AfterTest(TestDetails testDetails)
+        public void AfterTest(ITest test)
         {
         }
 
